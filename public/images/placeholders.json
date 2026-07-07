@@ -1,0 +1,170 @@
+[
+  {
+    "original": "/images/hero.jpg",
+    "placeholder": "/images/hero.svg"
+  },
+  {
+    "original": "/images/welcome.jpg",
+    "placeholder": "/images/welcome.svg"
+  },
+  {
+    "original": "/images/about.jpg",
+    "placeholder": "/images/about.svg"
+  },
+  {
+    "original": "/images/lobby.jpg",
+    "placeholder": "/images/lobby.svg"
+  },
+  {
+    "original": "/images/pool.jpg",
+    "placeholder": "/images/pool.svg"
+  },
+  {
+    "original": "/images/spa.jpg",
+    "placeholder": "/images/spa.svg"
+  },
+  {
+    "original": "/images/restaurant.jpg",
+    "placeholder": "/images/restaurant.svg"
+  },
+  {
+    "original": "/images/restaurant-interior.jpg",
+    "placeholder": "/images/restaurant-interior.svg"
+  },
+  {
+    "original": "/images/dining.jpg",
+    "placeholder": "/images/dining.svg"
+  },
+  {
+    "original": "/images/night-view.jpg",
+    "placeholder": "/images/night-view.svg"
+  },
+  {
+    "original": "/images/placeholder.jpg",
+    "placeholder": "/images/placeholder.svg"
+  },
+  {
+    "original": "/images/rooms/deluxe.jpg",
+    "placeholder": "/images/rooms/deluxe.svg"
+  },
+  {
+    "original": "/images/rooms/executive.jpg",
+    "placeholder": "/images/rooms/executive.svg"
+  },
+  {
+    "original": "/images/rooms/premium.jpg",
+    "placeholder": "/images/rooms/premium.svg"
+  },
+  {
+    "original": "/images/rooms/suite.jpg",
+    "placeholder": "/images/rooms/suite.svg"
+  },
+  {
+    "original": "/images/rooms/family.jpg",
+    "placeholder": "/images/rooms/family.svg"
+  },
+  {
+    "original": "/images/rooms/presidential.jpg",
+    "placeholder": "/images/rooms/presidential.svg"
+  },
+  {
+    "original": "/images/gallery/hotel-1.jpg",
+    "placeholder": "/images/gallery/hotel-1.svg"
+  },
+  {
+    "original": "/images/gallery/room-1.jpg",
+    "placeholder": "/images/gallery/room-1.svg"
+  },
+  {
+    "original": "/images/gallery/restaurant-1.jpg",
+    "placeholder": "/images/gallery/restaurant-1.svg"
+  },
+  {
+    "original": "/images/gallery/event-1.jpg",
+    "placeholder": "/images/gallery/event-1.svg"
+  },
+  {
+    "original": "/images/gallery/pool-1.jpg",
+    "placeholder": "/images/gallery/pool-1.svg"
+  },
+  {
+    "original": "/images/gallery/spa-1.jpg",
+    "placeholder": "/images/gallery/spa-1.svg"
+  },
+  {
+    "original": "/images/gallery/lobby-1.jpg",
+    "placeholder": "/images/gallery/lobby-1.svg"
+  },
+  {
+    "original": "/images/gallery/night-1.jpg",
+    "placeholder": "/images/gallery/night-1.svg"
+  },
+  {
+    "original": "/images/food/indian.jpg",
+    "placeholder": "/images/food/indian.svg"
+  },
+  {
+    "original": "/images/food/chinese.jpg",
+    "placeholder": "/images/food/chinese.svg"
+  },
+  {
+    "original": "/images/food/italian.jpg",
+    "placeholder": "/images/food/italian.svg"
+  },
+  {
+    "original": "/images/food/continental.jpg",
+    "placeholder": "/images/food/continental.svg"
+  },
+  {
+    "original": "/images/food/south-indian.jpg",
+    "placeholder": "/images/food/south-indian.svg"
+  },
+  {
+    "original": "/images/food/dessert.jpg",
+    "placeholder": "/images/food/dessert.svg"
+  },
+  {
+    "original": "/images/guests/guest-1.jpg",
+    "placeholder": "/images/guests/guest-1.svg"
+  },
+  {
+    "original": "/images/guests/guest-2.jpg",
+    "placeholder": "/images/guests/guest-2.svg"
+  },
+  {
+    "original": "/images/guests/guest-3.jpg",
+    "placeholder": "/images/guests/guest-3.svg"
+  },
+  {
+    "original": "/images/guests/guest-4.jpg",
+    "placeholder": "/images/guests/guest-4.svg"
+  },
+  {
+    "original": "/images/amenities/pool.jpg",
+    "placeholder": "/images/amenities/pool.svg"
+  },
+  {
+    "original": "/images/amenities/spa.jpg",
+    "placeholder": "/images/amenities/spa.svg"
+  },
+  {
+    "original": "/images/amenities/gym.jpg",
+    "placeholder": "/images/amenities/gym.svg"
+  },
+  {
+    "original": "/images/amenities/conference.jpg",
+    "placeholder": "/images/amenities/conference.svg"
+  },
+  {
+    "original": "/images/experiences/wedding.jpg",
+    "placeholder": "/images/experiences/wedding.svg"
+  },
+  {
+    "original": "/images/experiences/corporate.jpg",
+    "placeholder": "/images/experiences/corporate.svg"
+  },
+  {
+    "original": "/images/experiences/honeymoon.jpg",
+    "placeholder": "/images/experiences/honeymoon.svg"
+  }
+]

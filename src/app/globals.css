@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+@theme {
+  --color-luxury-white: #faf9f7;
+  --color-warm-beige: #e8e0d5;
+  --color-champagne: #c9a96e;
+  --color-soft-gold: #d4b896;
+  --color-charcoal: #1a1a1a;
+  --color-charcoal-light: #2d2d2d;
+  --color-wood: #5c4033;
+  --color-forest: #2d5a3d;
+  --color-forest-light: #3d7a52;
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-luxury-white text-charcoal antialiased overflow-x-hidden;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-champagne;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-champagne via-soft-gold to-champagne bg-clip-text text-transparent;
+  }
+
+  .bg-luxury-gradient {
+    background: linear-gradient(135deg, #faf9f7 0%, #e8e0d5 50%, #faf9f7 100%);
+  }
+
+  .bg-dark-gradient {
+    background: linear-gradient(180deg, #1a1a1a 0%, #2d2d2d 100%);
+  }
+
+  .border-gold {
+    border-color: #c9a96e;
+  }
+
+  .shadow-luxury {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .shadow-luxury-lg {
+    box-shadow: 0 10px 60px rgba(0, 0, 0, 0.12);
+  }
+
+  .section-padding {
+    @apply py-14 sm:py-20 md:py-28 lg:py-32;
+  }
+
+  .container-luxury {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+
+  /* Hide scrollbar for horizontal filter rows */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Safe area for notched phones + sticky mobile CTA */
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .pb-mobile-nav {
+    @apply pb-20 lg:pb-0;
+    padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  @media (min-width: 1024px) {
+    .pb-mobile-nav {
+      padding-bottom: 0;
+    }
+  }
+
+  /* Minimum touch target */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  /* Hero cinematic overlays */
+  .hero-vignette {
+    background: radial-gradient(
+      ellipse 85% 75% at 50% 45%,
+      transparent 0%,
+      rgba(26, 26, 26, 0.45) 100%
+    );
+  }
+
+  .hero-grain {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 128px 128px;
+  }
+
+  .hero-title-shimmer {
+    background: linear-gradient(
+      105deg,
+      transparent 0%,
+      transparent 38%,
+      rgba(201, 169, 110, 0.15) 46%,
+      rgba(212, 184, 150, 0.55) 50%,
+      rgba(201, 169, 110, 0.15) 54%,
+      transparent 62%,
+      transparent 100%
+    );
+    mix-blend-mode: screen;
+  }
+
+  /* Subtle linen texture overlay */
+  .texture-overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Gold decorative line */
+  .gold-line::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c9a96e, transparent);
+    margin-top: 1rem;
+  }
+
+  .gold-line-center::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #faf9f7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9a96e;
+  border-radius: 3px;
+}
+
+::selection {
+  background: #c9a96e;
+  color: #faf9f7;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

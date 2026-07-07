@@ -1,0 +1,16 @@
+{
+  "name": "Grand Imperial Palace",
+  "short_name": "GIP Hotel",
+  "description": "Luxury hotel and fine dining in Jaipur, Rajasthan",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#c9a96e",
+  "icons": [
+    {
+      "src": "/images/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
