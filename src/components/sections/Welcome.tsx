@@ -2,7 +2,7 @@
 
 import { SafeImage } from "@/components/ui/SafeImage";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { FadeIn, AnimatedCounter, ImageReveal } from "@/components/ui/Animations";
+import { FadeIn, AnimatedCounter } from "@/components/ui/Animations";
 import { IMAGES } from "@/lib/images";
 import type { HomepageSettings } from "@/types";
 
@@ -25,23 +25,25 @@ export function WelcomeSection({ settings }: { settings: HomepageSettings }) {
         />
 
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center mt-4">
-          <ImageReveal className="relative w-full order-1 lg:order-none">
-            <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] min-h-[300px] sm:min-h-[360px] overflow-hidden shadow-luxury-lg bg-warm-beige/30">
-              <SafeImage
-                src={IMAGES.welcome}
-                alt="Elegant hotel interior"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
+          <FadeIn direction="up" className="w-full">
+            <div className="relative w-full">
+              <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] min-h-[320px] sm:min-h-[400px] overflow-hidden shadow-luxury-lg bg-warm-beige/40">
+                <SafeImage
+                  src={IMAGES.about}
+                  alt="Elegant hotel interior"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+              <div className="absolute -bottom-3 -right-3 sm:-bottom-5 sm:-right-5 w-full h-full border border-champagne/40 -z-10 hidden sm:block pointer-events-none" />
+              <div className="absolute top-3 left-3 sm:-top-4 sm:-left-4 bg-champagne text-charcoal px-3 py-2 sm:px-5 sm:py-3 text-xs sm:text-sm tracking-widest uppercase shadow-luxury z-10">
+                Est. 1925
+              </div>
             </div>
-            <div className="absolute -bottom-3 -right-3 sm:-bottom-5 sm:-right-5 w-full h-full border border-champagne/40 -z-10 hidden sm:block pointer-events-none" />
-            <div className="absolute top-3 left-3 sm:-top-4 sm:-left-4 bg-champagne text-charcoal px-3 py-2 sm:px-5 sm:py-3 text-xs sm:text-sm tracking-widest uppercase shadow-luxury z-10">
-              Est. 1925
-            </div>
-          </ImageReveal>
+          </FadeIn>
 
-          <FadeIn direction="right" delay={0.15} className="order-2 lg:order-none">
+          <FadeIn direction="right" delay={0.15}>
             <div className="space-y-6 sm:space-y-8">
               {[
                 { title: settings.aboutTitle, text: settings.aboutText },

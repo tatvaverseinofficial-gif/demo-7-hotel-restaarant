@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import AdminLoginPage from "./AdminLoginClient";
+import AdminLoginClient from "@/app/admin/login/AdminLoginClient";
 
 export default function LoginPage() {
   return (
@@ -8,7 +8,7 @@ export default function LoginPage() {
         <p className="text-warm-beige/50 text-sm">Loading...</p>
       </div>
     }>
-      <AdminLoginPage />
+      <AdminLoginClient />
     </Suspense>
   );
 }

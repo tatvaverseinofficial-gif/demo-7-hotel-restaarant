@@ -380,7 +380,7 @@ export const mockSEOSettings: SEOSettings = {
 export const mockWebsiteSettings: WebsiteSettings = {
   hotelName: "Grand Imperial Palace",
   tagline: "Luxury Beyond Expectations",
-  phone: "+91 98765 43210",
+  phone: "1111111111",
   email: "reservations@grandimperialpalace.com",
   address: "MI Road, Jaipur, Rajasthan 302001, India",
   workingHours: "24 Hours | Restaurant: 7:00 AM - 11:00 PM",

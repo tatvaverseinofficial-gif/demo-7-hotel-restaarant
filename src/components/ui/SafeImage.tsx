@@ -52,7 +52,7 @@ export function SafeImage({
       fill={fill}
       width={!fill ? width : undefined}
       height={!fill ? height : undefined}
-      className={className}
+      className={cn(fill && "absolute inset-0 h-full w-full", className)}
       priority={priority}
       sizes={sizes}
       onError={() => {

@@ -52,6 +52,29 @@ NEXT_PUBLIC_DEMO_MODE=true
 
 See `.env.example` for all variables.
 
+## Deploy to Vercel
+
+1. Import the repo: [demo-7-hotel-restaarant](https://github.com/tatvaverseinofficial-gif/demo-7-hotel-restaarant)
+2. Framework preset: **Next.js** (auto-detected)
+3. Build command: `npm run build` | Output: `.next` (default)
+4. Add **Environment Variables** in Vercel → Settings → Environment Variables:
+
+| Variable | Required | Example |
+|----------|----------|---------|
+| `NEXT_PUBLIC_SITE_URL` | Yes | `https://your-app.vercel.app` |
+| `ADMIN_USERNAME` | Yes | your admin user |
+| `ADMIN_PASSWORD` | Yes | strong password |
+| `ADMIN_SESSION_SECRET` | Yes | random 32+ char string |
+| `NEXT_PUBLIC_DEMO_MODE` | Yes | `true` (demo) or `false` (full edit) |
+| `NEXT_PUBLIC_HOTEL_PHONE` | Optional | `1111111111` |
+| `NEXT_PUBLIC_SUPABASE_URL` | If full edit | Supabase URL |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | If full edit | Supabase anon key |
+| `SUPABASE_SERVICE_ROLE_KEY` | If full edit | Supabase service role |
+
+5. Deploy. Admin login: `https://your-app.vercel.app/admin/login`
+
+**Note:** Set `NEXT_PUBLIC_SITE_URL` to your production Vercel URL after the first deploy (or use your custom domain).
+
 ## Supabase Migration
 
 1. Create a Supabase project
