@@ -22,7 +22,7 @@ export function Footer({ settings }: { settings: WebsiteSettings }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
           <div className="sm:col-span-2 lg:col-span-1">
             <h3 className="text-xl sm:text-2xl font-serif text-champagne mb-1">{settings.hotelName}</h3>
-            <p className="text-xs tracking-widest uppercase text-warm-beige/40 mb-5">Jaipur, Rajasthan</p>
+            <p className="text-xs tracking-widest uppercase text-warm-beige/40 mb-5">Mangalore, Karnataka</p>
             <p className="text-warm-beige/65 text-sm leading-relaxed mb-6">
               {settings.tagline}. Experience the finest in Indian hospitality
               with world-class amenities and personalized service.
@@ -66,23 +66,23 @@ export function Footer({ settings }: { settings: WebsiteSettings }) {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-champagne mt-0.5 shrink-0" />
-                <span className="text-warm-beige/65 text-sm leading-relaxed">{settings.address}</span>
+                <span className="text-warm-beige/65 text-sm leading-relaxed break-words">{settings.address}</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-champagne shrink-0" />
-                <a href={`tel:${settings.phone.replace(/\s/g, "")}`} className="text-warm-beige/65 text-sm hover:text-champagne transition-colors">
+                <a href={`tel:${settings.phone.replace(/\s/g, "")}`} className="text-warm-beige/65 text-sm hover:text-champagne transition-colors break-all">
                   {settings.phone}
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={16} className="text-champagne shrink-0" />
-                <a href={`mailto:${settings.email}`} className="text-warm-beige/65 text-sm hover:text-champagne transition-colors">
+                <a href={`mailto:${settings.email}`} className="text-warm-beige/65 text-sm hover:text-champagne transition-colors break-all">
                   {settings.email}
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Clock size={16} className="text-champagne shrink-0" />
-                <span className="text-warm-beige/65 text-sm">{settings.workingHours}</span>
+                <span className="text-warm-beige/65 text-sm break-words">{settings.workingHours}</span>
               </li>
             </ul>
           </div>

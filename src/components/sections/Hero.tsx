@@ -31,8 +31,8 @@ function HeroTitleReveal({
       <h1
         className={`font-serif text-luxury-white mb-4 sm:mb-6 leading-[1.12] tracking-tight px-2 ${
           compact
-            ? "text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
-            : "text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+            ? "text-2xl sm:text-4xl md:text-5xl lg:text-6xl"
+            : "text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
         }`}
       >
         {text}
@@ -45,8 +45,8 @@ function HeroTitleReveal({
       <motion.h1
         className={`relative font-serif text-luxury-white leading-[1.12] tracking-tight ${
           compact
-            ? "text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
-            : "text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+            ? "text-2xl sm:text-4xl md:text-5xl lg:text-6xl"
+            : "text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
         }`}
         initial="hidden"
         animate="visible"
@@ -130,7 +130,7 @@ export function HeroSection({
   const kenBurnsDuration = isMobile ? 2.2 : 2.9;
 
   return (
-    <section className="relative h-[100dvh] min-h-[520px] max-h-[900px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[100dvh] min-h-[440px] sm:min-h-[520px] max-h-[900px] flex items-center justify-center overflow-hidden">
       {/* Cinematic background — Ken Burns settle + gentle scroll parallax */}
       <motion.div
         className="absolute inset-0 will-change-transform"
@@ -236,7 +236,7 @@ export function HeroSection({
           <Button
             variant="ghost"
             size="lg"
-            className="w-full sm:w-auto text-luxury-white/90 hover:text-champagne"
+            className="hidden sm:inline-flex w-full sm:w-auto text-luxury-white/90 hover:text-champagne"
             onClick={() => document.getElementById("restaurant")?.scrollIntoView({ behavior: "smooth" })}
           >
             View Restaurant

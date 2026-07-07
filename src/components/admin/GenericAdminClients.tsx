@@ -35,8 +35,8 @@ export function AmenitiesAdminClient({ amenities }: { amenities: Amenity[] }) {
   return (
     <DataTable title="Amenities" data={amenities} columns={[
       { key: "name", label: "Name" },
-      { key: "description", label: "Description" },
-      { key: "order", label: "Order" },
+      { key: "description", label: "Description", render: (i) => <span className="line-clamp-3">{i.description}</span> },
+      { key: "order", label: "Order", hideOnMobile: true },
     ]} addHref="/admin/amenities/new" editHref={(id) => `/admin/amenities/${id}`} onDelete={handleDelete} onToggleVisibility={handleToggle} readOnly={readOnly} />
   );
 }
@@ -55,7 +55,7 @@ export function ExperiencesAdminClient({ experiences }: { experiences: Experienc
   return (
     <DataTable title="Experiences" data={experiences} columns={[
       { key: "name", label: "Name" },
-      { key: "description", label: "Description" },
+      { key: "description", label: "Description", render: (i) => <span className="line-clamp-3">{i.description}</span> },
     ]} addHref="/admin/experiences/new" editHref={(id) => `/admin/experiences/${id}`} onDelete={handleDelete} onToggleVisibility={handleToggle} readOnly={readOnly} />
   );
 }
@@ -76,7 +76,7 @@ export function TestimonialsAdminClient({ testimonials }: { testimonials: Testim
       { key: "guestName", label: "Guest" },
       { key: "rating", label: "Rating" },
       { key: "city", label: "City" },
-      { key: "roomStayed", label: "Room" },
+      { key: "roomStayed", label: "Room", hideOnMobile: true },
     ]} addHref="/admin/testimonials/new" editHref={(id) => `/admin/testimonials/${id}`} onDelete={handleDelete} onToggleVisibility={handleToggle} readOnly={readOnly} />
   );
 }

@@ -28,7 +28,7 @@ export function FAQSection({ faqs }: { faqs: FAQ[] }) {
                   onClick={() => setOpenId(openId === faq.id ? null : faq.id)}
                   aria-expanded={openId === faq.id}
                 >
-                  <span className="font-serif text-base sm:text-lg text-charcoal pr-4">{faq.question}</span>
+                  <span className="font-serif text-base sm:text-lg text-charcoal pr-4 min-w-0 break-words text-left">{faq.question}</span>
                   <motion.span
                     animate={{ rotate: openId === faq.id ? 180 : 0 }}
                     transition={{ duration: 0.3 }}

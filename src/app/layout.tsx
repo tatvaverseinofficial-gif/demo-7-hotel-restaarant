@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import { getSEOSettings, getWebsiteSettings, getFAQs } from "@/lib/data/service";
 import { StructuredData } from "@/components/seo/StructuredData";
@@ -16,6 +16,12 @@ const inter = Inter({
   variable: "--font-sans",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 
 export async function generateMetadata(): Promise<Metadata> {
   const seo = await getSEOSettings();
@@ -68,7 +74,7 @@ export default async function RootLayout({
       <head>
         <StructuredData settings={settings} faqs={faqs} />
       </head>
-      <body className="font-sans">{children}</body>
+      <body className="font-sans min-w-0 overflow-x-hidden">{children}</body>
     </html>
   );
 }

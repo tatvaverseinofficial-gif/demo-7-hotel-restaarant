@@ -7,8 +7,10 @@ import { ArrowLeft } from "lucide-react";
 import { useAdminMode } from "@/components/admin/AdminModeProvider";
 import { ImageUpload } from "@/components/admin/ImageUpload";
 
-const inputClass = "w-full border border-warm-beige px-4 py-2.5 text-charcoal focus:outline-none focus:border-champagne bg-luxury-white";
+const inputClass = "w-full border border-warm-beige px-4 py-3 text-base text-charcoal focus:outline-none focus:border-champagne bg-luxury-white min-h-[48px]";
 const labelClass = "block text-sm text-charcoal/70 mb-1.5";
+const formClass = "bg-luxury-white p-4 sm:p-6 shadow-luxury space-y-5 max-w-2xl w-full";
+const headingClass = "text-2xl sm:text-3xl font-serif text-charcoal mb-6 sm:mb-8";
 
 export function GalleryForm() {
   const router = useRouter();
@@ -28,8 +30,8 @@ export function GalleryForm() {
   return (
     <div>
       <Link href="/admin/gallery" className="flex items-center gap-2 text-charcoal/60 hover:text-champagne mb-6 text-sm"><ArrowLeft size={16} /> Back</Link>
-      <h1 className="text-3xl font-serif text-charcoal mb-8">Add Gallery Image</h1>
-      <form onSubmit={handleSubmit} className="bg-luxury-white p-6 shadow-luxury space-y-5 max-w-2xl">
+      <h1 className={headingClass}>Add Gallery Image</h1>
+      <form onSubmit={handleSubmit} className={formClass}>
         <ImageUpload label="Image" folder="gallery" value={form.src} onChange={(url) => setForm({ ...form, src: url })} />
         <div><label className={labelClass}>Alt Text</label><input className={inputClass} required value={form.alt} onChange={(e) => setForm({ ...form, alt: e.target.value })} readOnly={readOnly} disabled={readOnly} /></div>
         <div><label className={labelClass}>Category</label>
@@ -60,8 +62,8 @@ export function AmenityForm() {
   return (
     <div>
       <Link href="/admin/amenities" className="flex items-center gap-2 text-charcoal/60 hover:text-champagne mb-6 text-sm"><ArrowLeft size={16} /> Back</Link>
-      <h1 className="text-3xl font-serif text-charcoal mb-8">Add Amenity</h1>
-      <form onSubmit={handleSubmit} className="bg-luxury-white p-6 shadow-luxury space-y-5 max-w-2xl">
+      <h1 className={headingClass}>Add Amenity</h1>
+      <form onSubmit={handleSubmit} className={formClass}>
         <div><label className={labelClass}>Name</label><input className={inputClass} required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} /></div>
         <div><label className={labelClass}>Description</label><textarea className={inputClass} rows={3} value={form.description} onChange={(e) => setForm({ ...form, description: e.target.value })} /></div>
         <div><label className={labelClass}>Icon</label><input className={inputClass} value={form.icon} onChange={(e) => setForm({ ...form, icon: e.target.value })} /></div>
@@ -87,8 +89,8 @@ export function ExperienceForm() {
   return (
     <div>
       <Link href="/admin/experiences" className="flex items-center gap-2 text-charcoal/60 hover:text-champagne mb-6 text-sm"><ArrowLeft size={16} /> Back</Link>
-      <h1 className="text-3xl font-serif text-charcoal mb-8">Add Experience</h1>
-      <form onSubmit={handleSubmit} className="bg-luxury-white p-6 shadow-luxury space-y-5 max-w-2xl">
+      <h1 className={headingClass}>Add Experience</h1>
+      <form onSubmit={handleSubmit} className={formClass}>
         <div><label className={labelClass}>Name</label><input className={inputClass} required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} /></div>
         <div><label className={labelClass}>Description</label><textarea className={inputClass} rows={3} value={form.description} onChange={(e) => setForm({ ...form, description: e.target.value })} /></div>
         <div><label className={labelClass}>Image URL</label><input className={inputClass} value={form.image} onChange={(e) => setForm({ ...form, image: e.target.value })} /></div>
@@ -117,8 +119,8 @@ export function TestimonialForm() {
   return (
     <div>
       <Link href="/admin/testimonials" className="flex items-center gap-2 text-charcoal/60 hover:text-champagne mb-6 text-sm"><ArrowLeft size={16} /> Back</Link>
-      <h1 className="text-3xl font-serif text-charcoal mb-8">Add Testimonial</h1>
-      <form onSubmit={handleSubmit} className="bg-luxury-white p-6 shadow-luxury space-y-5 max-w-2xl">
+      <h1 className={headingClass}>Add Testimonial</h1>
+      <form onSubmit={handleSubmit} className={formClass}>
         <div><label className={labelClass}>Guest Name</label><input className={inputClass} required value={form.guestName} onChange={(e) => setForm({ ...form, guestName: e.target.value })} /></div>
         <div><label className={labelClass}>Review</label><textarea className={inputClass} rows={4} required value={form.review} onChange={(e) => setForm({ ...form, review: e.target.value })} /></div>
         <div className="grid sm:grid-cols-2 gap-5">

@@ -11,15 +11,14 @@ interface FilterScrollProps {
 /** Horizontally scrollable filter chips — mobile-friendly, no layout wrap */
 export function FilterScroll({ children, className, ariaLabel = "Filters" }: FilterScrollProps) {
   return (
-    <div
-      className={cn(
-        "flex gap-2 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap sm:justify-center sm:overflow-visible scrollbar-hide",
-        className
-      )}
-      role="tablist"
-      aria-label={ariaLabel}
-    >
-      {children}
+    <div className={cn("filter-scroll-outer", className)}>
+      <div
+        className="flex gap-2 overflow-x-auto pb-2 sm:flex-wrap sm:justify-center sm:overflow-visible scrollbar-hide"
+        role="tablist"
+        aria-label={ariaLabel}
+      >
+        {children}
+      </div>
     </div>
   );
 }

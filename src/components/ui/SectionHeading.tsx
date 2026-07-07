@@ -39,7 +39,7 @@ export function SectionHeading({
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className={cn(
-            "inline-block text-xs tracking-[0.3em] uppercase mb-4",
+            "inline-block text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-3 sm:mb-4",
             light ? "text-champagne" : "text-forest"
           )}
         >
@@ -48,7 +48,7 @@ export function SectionHeading({
       )}
       <h2
         className={cn(
-          "text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif mb-3 sm:mb-4 leading-tight",
+          "text-xl sm:text-3xl md:text-4xl lg:text-5xl font-serif mb-3 sm:mb-4 leading-tight break-words",
           light ? "text-luxury-white" : "text-charcoal"
         )}
       >

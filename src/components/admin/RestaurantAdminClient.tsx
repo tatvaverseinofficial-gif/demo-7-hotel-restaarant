@@ -35,9 +35,9 @@ export function RestaurantAdminClient({ items }: { items: RestaurantItem[] }) {
       columns={[
         { key: "name", label: "Dish" },
         { key: "cuisine", label: "Cuisine" },
-        { key: "category", label: "Category" },
+        { key: "category", label: "Category", hideOnMobile: true },
         { key: "price", label: "Price", render: (r) => formatPrice(r.price) },
-        { key: "isSignature", label: "Signature", render: (r) => r.isSignature ? "Yes" : "No" },
+        { key: "isSignature", label: "Signature", render: (r) => r.isSignature ? "Yes" : "No", hideOnMobile: true },
       ]}
       addHref="/admin/restaurant/new"
       editHref={(id) => `/admin/restaurant/${id}`}

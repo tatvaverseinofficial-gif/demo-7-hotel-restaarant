@@ -71,7 +71,7 @@ export function RoomForm({ room }: RoomFormProps) {
     }
   };
 
-  const inputClass = "w-full border border-warm-beige px-4 py-2.5 text-charcoal focus:outline-none focus:border-champagne bg-luxury-white";
+  const inputClass = "w-full border border-warm-beige px-4 py-3 text-base text-charcoal focus:outline-none focus:border-champagne bg-luxury-white min-h-[48px]";
   const labelClass = "block text-sm text-charcoal/70 mb-1.5";
 
   return (
@@ -80,11 +80,11 @@ export function RoomForm({ room }: RoomFormProps) {
         <ArrowLeft size={16} /> Back to Rooms
       </Link>
 
-      <h1 className="text-3xl font-serif text-charcoal mb-8">
+      <h1 className="text-2xl sm:text-3xl font-serif text-charcoal mb-6 sm:mb-8 break-words">
         {readOnly ? "View Room" : room ? "Edit Room" : "Add New Room"}
       </h1>
 
-      <form onSubmit={handleSubmit} className="bg-luxury-white p-6 shadow-luxury space-y-5 max-w-2xl">
+      <form onSubmit={handleSubmit} className="bg-luxury-white p-4 sm:p-6 shadow-luxury space-y-5 max-w-2xl w-full">
         <fieldset disabled={readOnly} className="space-y-5 disabled:opacity-90">
         <div>
           <label className={labelClass}>Room Name *</label>
@@ -144,18 +144,18 @@ export function RoomForm({ room }: RoomFormProps) {
           <input className={inputClass} value={form.images} onChange={(e) => setForm({ ...form, images: e.target.value })} />
         </div>
 
-        <div className="grid sm:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           <div>
             <label className={labelClass}>Availability</label>
             <select className={inputClass} value={form.availability} onChange={(e) => setForm({ ...form, availability: e.target.value as AvailabilityStatus })}>
               {availabilityOptions.map((a) => <option key={a} value={a}>{a.replace("_", " ")}</option>)}
             </select>
           </div>
-          <label className="flex items-center gap-2 cursor-pointer">
+          <label className="flex items-center gap-2 cursor-pointer min-h-[48px]">
             <input type="checkbox" checked={form.featured} onChange={(e) => setForm({ ...form, featured: e.target.checked })} />
             <span className="text-sm text-charcoal/70">Featured</span>
           </label>
-          <label className="flex items-center gap-2 cursor-pointer">
+          <label className="flex items-center gap-2 cursor-pointer min-h-[48px]">
             <input type="checkbox" checked={form.visible} onChange={(e) => setForm({ ...form, visible: e.target.checked })} />
             <span className="text-sm text-charcoal/70">Visible</span>
           </label>

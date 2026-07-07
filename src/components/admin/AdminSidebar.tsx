@@ -38,18 +38,18 @@ export function AdminSidebar() {
 
       <aside
         className={cn(
-          "fixed inset-y-0 left-0 z-40 w-64 bg-charcoal text-luxury-white transform transition-transform duration-300 lg:translate-x-0",
+          "fixed inset-y-0 left-0 z-40 w-64 max-w-[85vw] bg-charcoal text-luxury-white transform transition-transform duration-300 lg:translate-x-0 flex flex-col h-[100dvh]",
           isOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
-        <div className="p-6 border-b border-warm-beige/10">
-          <Link href="/admin" className="text-xl font-serif text-champagne">
+        <div className="p-5 sm:p-6 border-b border-warm-beige/10 shrink-0">
+          <Link href="/admin" className="text-lg sm:text-xl font-serif text-champagne" onClick={() => setIsOpen(false)}>
             Admin Panel
           </Link>
-          <p className="text-xs text-warm-beige/50 mt-1">Grand Imperial Palace</p>
+          <p className="text-xs text-warm-beige/50 mt-1 truncate">Grand Imperial Palace</p>
         </div>
 
-        <nav className="p-4 space-y-1">
+        <nav className="flex-1 overflow-y-auto overscroll-contain p-3 sm:p-4 space-y-1">
           {navItems.map((item) => {
             const isActive = pathname === item.href || (item.href !== "/admin" && pathname.startsWith(item.href));
             return (
@@ -64,19 +64,20 @@ export function AdminSidebar() {
                     : "text-warm-beige/70 hover:bg-charcoal-light hover:text-luxury-white"
                 )}
               >
-                <item.icon size={18} />
-                {item.label}
+                <item.icon size={18} className="shrink-0" />
+                <span className="truncate">{item.label}</span>
               </Link>
             );
           })}
         </nav>
 
-        <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-warm-beige/10">
+        <div className="shrink-0 p-4 border-t border-warm-beige/10 safe-bottom">
           <Link
             href="/"
-            className="flex items-center gap-2 text-sm text-warm-beige/60 hover:text-champagne transition-colors"
+            className="flex items-center gap-2 text-sm text-warm-beige/60 hover:text-champagne transition-colors min-h-[44px] touch-manipulation"
+            onClick={() => setIsOpen(false)}
           >
-            <Home size={16} /> View Website
+            <Home size={16} className="shrink-0" /> View Website
           </Link>
         </div>
       </aside>

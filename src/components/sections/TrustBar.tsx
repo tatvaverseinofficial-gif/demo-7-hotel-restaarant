@@ -15,7 +15,7 @@ export function TrustBar() {
     <section className="relative bg-charcoal border-y border-champagne/20 overflow-hidden">
       <div className="absolute inset-0 texture-overlay" />
       <div className="container-luxury relative z-10 py-4 sm:py-6">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 min-[360px]:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {badges.map((badge, i) => (
             <motion.div
               key={badge.label}

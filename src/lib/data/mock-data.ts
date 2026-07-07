@@ -340,12 +340,12 @@ export const mockTestimonials: Testimonial[] = [
 ];
 
 export const mockAttractions: Attraction[] = [
-  { id: "attr-1", name: "City Palace", description: "Historic royal residence with stunning architecture", distance: "2.5 km", type: "heritage", icon: "landmark" },
-  { id: "attr-2", name: "International Airport", description: "Jaipur International Airport", distance: "12 km", type: "airport", icon: "plane" },
-  { id: "attr-3", name: "Railway Station", description: "Jaipur Junction Railway Station", distance: "4 km", type: "railway", icon: "train" },
-  { id: "attr-4", name: "MI Road Shopping", description: "Premier shopping and dining district", distance: "1.5 km", type: "shopping", icon: "shopping" },
-  { id: "attr-5", name: "Govind Dev Ji Temple", description: "Sacred Hindu temple in City Palace complex", distance: "2.8 km", type: "temple", icon: "church" },
-  { id: "attr-6", name: "Amber Fort", description: "Magnificent hilltop fort and UNESCO site", distance: "11 km", type: "heritage", icon: "landmark" },
+  { id: "attr-1", name: "Kudroli Gokarnath Temple", description: "Iconic temple known for its vibrant Ganesha Chaturthi celebrations", distance: "3 km", type: "heritage", icon: "church" },
+  { id: "attr-2", name: "Mangalore International Airport", description: "Mangalore International Airport, Bajpe", distance: "12 km", type: "airport", icon: "plane" },
+  { id: "attr-3", name: "Mangalore Central Station", description: "Mangalore Central Railway Station", distance: "2.5 km", type: "railway", icon: "train" },
+  { id: "attr-4", name: "City Centre Mall", description: "Premier shopping and dining on MG Road", distance: "1.2 km", type: "shopping", icon: "shopping" },
+  { id: "attr-5", name: "St. Aloysius Chapel", description: "Historic chapel famed for its stunning frescoes", distance: "4 km", type: "heritage", icon: "landmark" },
+  { id: "attr-6", name: "Panambur Beach", description: "Golden sands and sunset views on the Arabian Sea", distance: "10 km", type: "heritage", icon: "landmark" },
 ];
 
 export const mockFAQs: FAQ[] = [
@@ -359,20 +359,20 @@ export const mockFAQs: FAQ[] = [
 
 export const mockHomepageSettings: HomepageSettings = {
   heroTitle: "Luxury Beyond Expectations",
-  heroSubtitle: "Experience timeless hospitality in the heart of Rajasthan",
+  heroSubtitle: "Experience timeless hospitality on the scenic coast of Karnataka",
   heroImage: IMAGES.hero,
   welcomeTitle: "Welcome to Grand Imperial Palace",
   welcomeText: "Where heritage meets contemporary luxury, creating moments that linger long after your stay.",
   aboutTitle: "Our Story",
-  aboutText: "Nestled in the pink city of Jaipur, Grand Imperial Palace has been a beacon of Indian hospitality since 1925.",
+  aboutText: "Nestled in the coastal city of Mangalore, Grand Imperial Palace has been a beacon of Indian hospitality since 1925.",
   heritageText: "A legacy of five generations, preserving the art of Indian graciousness while embracing modern luxury.",
   missionText: "To create extraordinary experiences through personalized service, culinary excellence, and authentic warmth.",
 };
 
 export const mockSEOSettings: SEOSettings = {
-  title: "Grand Imperial Palace | Luxury Hotel & Fine Dining in Jaipur",
-  description: "Experience timeless hospitality at Grand Imperial Palace, Jaipur's premier luxury hotel featuring exquisite rooms, award-winning restaurant, spa, and event venues.",
-  keywords: "luxury hotel Jaipur, fine dining restaurant, boutique hotel Rajasthan, wedding venue Jaipur, spa hotel India",
+  title: "Grand Imperial Palace | Luxury Hotel & Fine Dining in Mangalore",
+  description: "Experience timeless hospitality at Grand Imperial Palace, Mangalore's premier luxury hotel featuring exquisite rooms, award-winning restaurant, spa, and event venues.",
+  keywords: "luxury hotel Mangalore, fine dining restaurant Karnataka, boutique hotel Mangalore, wedding venue Mangalore, spa hotel coastal Karnataka",
   ogImage: IMAGES.hero,
   twitterHandle: "@grandimperial",
 };
@@ -382,10 +382,10 @@ export const mockWebsiteSettings: WebsiteSettings = {
   tagline: "Luxury Beyond Expectations",
   phone: "1111111111",
   email: "reservations@grandimperialpalace.com",
-  address: "MI Road, Jaipur, Rajasthan 302001, India",
+  address: "MG Road, Mangalore, Karnataka 575001, India",
   workingHours: "24 Hours | Restaurant: 7:00 AM - 11:00 PM",
-  mapLat: 26.9124,
-  mapLng: 75.7873,
+  mapLat: 12.9141,
+  mapLng: 74.8560,
   socialFacebook: "https://facebook.com/grandimperialpalace",
   socialInstagram: "https://instagram.com/grandimperialpalace",
   socialTwitter: "https://twitter.com/grandimperial",

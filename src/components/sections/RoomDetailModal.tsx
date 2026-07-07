@@ -100,7 +100,7 @@ export function RoomDetailModal({
 
           <div className="mb-8">
             <h4 className="text-sm tracking-widest uppercase text-charcoal/50 mb-3">Amenities</h4>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {room.amenities.map((a) => (
                 <span key={a} className="flex items-center gap-2 text-sm text-charcoal/70">
                   <Check size={14} className="text-forest shrink-0" /> {a}

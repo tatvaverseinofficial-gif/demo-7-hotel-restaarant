@@ -23,7 +23,7 @@ export function RestaurantForm({ item }: { item?: RestaurantItem }) {
     visible: item?.visible ?? true,
   });
 
-  const inputClass = "w-full border border-warm-beige px-4 py-2.5 text-charcoal focus:outline-none focus:border-champagne bg-luxury-white";
+  const inputClass = "w-full border border-warm-beige px-4 py-3 text-base text-charcoal focus:outline-none focus:border-champagne bg-luxury-white min-h-[48px]";
   const labelClass = "block text-sm text-charcoal/70 mb-1.5";
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -49,8 +49,8 @@ export function RestaurantForm({ item }: { item?: RestaurantItem }) {
       <Link href="/admin/restaurant" className="flex items-center gap-2 text-charcoal/60 hover:text-champagne mb-6 text-sm">
         <ArrowLeft size={16} /> Back
       </Link>
-      <h1 className="text-3xl font-serif text-charcoal mb-8">{item ? "Edit Dish" : "Add Dish"}</h1>
-      <form onSubmit={handleSubmit} className="bg-luxury-white p-6 shadow-luxury space-y-5 max-w-2xl">
+      <h1 className="text-2xl sm:text-3xl font-serif text-charcoal mb-6 sm:mb-8">{item ? "Edit Dish" : "Add Dish"}</h1>
+      <form onSubmit={handleSubmit} className="bg-luxury-white p-4 sm:p-6 shadow-luxury space-y-5 max-w-2xl w-full">
         <div>
           <label className={labelClass}>Name *</label>
           <input className={inputClass} required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
@@ -75,7 +75,7 @@ export function RestaurantForm({ item }: { item?: RestaurantItem }) {
           <label className={labelClass}>Image URL</label>
           <input className={inputClass} value={form.image} onChange={(e) => setForm({ ...form, image: e.target.value })} />
         </div>
-        <div className="flex gap-6">
+        <div className="flex flex-wrap gap-4 sm:gap-6">
           <label className="flex items-center gap-2"><input type="checkbox" checked={form.isSignature} onChange={(e) => setForm({ ...form, isSignature: e.target.checked })} /><span className="text-sm">Signature</span></label>
           <label className="flex items-center gap-2"><input type="checkbox" checked={form.isChefSpecial} onChange={(e) => setForm({ ...form, isChefSpecial: e.target.checked })} /><span className="text-sm">Chef Special</span></label>
           <label className="flex items-center gap-2"><input type="checkbox" checked={form.visible} onChange={(e) => setForm({ ...form, visible: e.target.checked })} /><span className="text-sm">Visible</span></label>

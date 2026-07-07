@@ -32,7 +32,7 @@ export function AmenitiesSection({ amenities }: { amenities: Amenity[] }) {
           description="Indulge in an array of exceptional facilities designed for your comfort and pleasure."
         />
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-6">
+        <div className="grid grid-cols-1 min-[420px]:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-6">
           {amenities.map((amenity, index) => {
             const Icon = iconMap[amenity.icon] || Sparkles;
             return (
@@ -46,7 +46,7 @@ export function AmenitiesSection({ amenities }: { amenities: Amenity[] }) {
                     <Icon size={24} className="text-champagne sm:hidden" />
                     <Icon size={28} className="text-champagne hidden sm:block" />
                   </div>
-                  <h3 className="text-base sm:text-lg font-serif text-charcoal mb-1 sm:mb-2">{amenity.name}</h3>
+                  <h3 className="text-sm sm:text-lg font-serif text-charcoal mb-1 sm:mb-2 leading-snug">{amenity.name}</h3>
                   <p className="text-xs sm:text-sm text-charcoal/60 leading-snug">{amenity.description}</p>
                 </motion.div>
               </FadeIn>

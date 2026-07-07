@@ -128,13 +128,13 @@ function DishCard({ dish }: { dish: RestaurantItem }) {
           sizes="(max-width: 768px) 100vw, 33vw"
         />
       </div>
-      <div className="p-5">
-        <div className="flex items-start justify-between gap-2">
-          <div>
+      <div className="p-4 sm:p-5">
+        <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-2">
+          <div className="min-w-0">
             <span className="text-xs text-forest-light uppercase tracking-wider">{dish.cuisine}</span>
-            <h4 className="text-lg font-serif text-luxury-white mt-1">{dish.name}</h4>
+            <h4 className="text-base sm:text-lg font-serif text-luxury-white mt-1 break-words">{dish.name}</h4>
           </div>
-          <span className="text-champagne font-serif whitespace-nowrap">{formatPrice(dish.price)}</span>
+          <span className="text-champagne font-serif shrink-0">{formatPrice(dish.price)}</span>
         </div>
         <p className="text-sm text-warm-beige/60 mt-2 line-clamp-2">{dish.description}</p>
       </div>

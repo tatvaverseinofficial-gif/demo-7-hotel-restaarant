@@ -26,7 +26,7 @@ export function AttractionsSection({
     <section id="attractions" className="section-padding bg-warm-beige/20">
       <div className="container-luxury">
         <SectionHeading
-          subtitle="Explore Jaipur"
+          subtitle="Explore Mangalore"
           title="Nearby Attractions"
           description="Discover the rich heritage and vibrant culture surrounding our hotel."
         />
@@ -60,8 +60,8 @@ export function AttractionsSection({
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2">
-                        <h4 className="font-serif text-base sm:text-lg text-charcoal">{attraction.name}</h4>
-                        <span className="text-xs sm:text-sm text-champagne whitespace-nowrap">{attraction.distance}</span>
+                        <h4 className="font-serif text-base sm:text-lg text-charcoal break-words">{attraction.name}</h4>
+                        <span className="text-xs sm:text-sm text-champagne shrink-0">{attraction.distance}</span>
                       </div>
                       <p className="text-xs sm:text-sm text-charcoal/60 mt-1">{attraction.description}</p>
                     </div>

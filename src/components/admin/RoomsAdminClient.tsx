@@ -35,9 +35,9 @@ export function RoomsAdminClient({ rooms }: { rooms: Room[] }) {
         { key: "name", label: "Name" },
         { key: "category", label: "Category", render: (r) => getCategoryLabel(r.category) },
         { key: "price", label: "Price", render: (r) => formatPrice(r.price) },
-        { key: "capacity", label: "Capacity" },
-        { key: "availability", label: "Status" },
-        { key: "featured", label: "Featured", render: (r) => r.featured ? "Yes" : "No" },
+        { key: "capacity", label: "Capacity", hideOnMobile: true },
+        { key: "availability", label: "Status", hideOnMobile: true },
+        { key: "featured", label: "Featured", render: (r) => r.featured ? "Yes" : "No", hideOnMobile: true },
       ]}
       addHref="/admin/rooms/new"
       editHref={(id) => `/admin/rooms/${id}`}

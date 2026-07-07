@@ -27,7 +27,7 @@ export function ExperiencesSection({ experiences }: { experiences: Experience[] 
           description="From intimate celebrations to grand events, we create unforgettable moments tailored to your vision."
         />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
           {experiences.map((exp, index) => {
             const Icon = iconMap[exp.icon] || Heart;
             return (

@@ -103,7 +103,7 @@ export function Header({
             ))}
           </nav>
 
-          <div className="hidden lg:flex items-center gap-4 shrink-0">
+          <div className="hidden xl:flex items-center gap-4 shrink-0">
             <a
               href={`tel:${phone.replace(/\s/g, "")}`}
               className="flex items-center gap-2 text-luxury-white/70 hover:text-champagne transition-colors"
@@ -121,7 +121,7 @@ export function Header({
           </div>
 
           <button
-            className="lg:hidden text-luxury-white p-2 -mr-2 touch-target flex items-center justify-center shrink-0"
+            className="xl:hidden text-luxury-white p-2 -mr-2 touch-target flex items-center justify-center shrink-0"
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             aria-label={isMobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMobileOpen}
@@ -138,7 +138,7 @@ export function Header({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-charcoal/80 backdrop-blur-sm z-40 lg:hidden"
+              className="fixed inset-0 bg-charcoal/80 backdrop-blur-sm z-40 xl:hidden"
               onClick={() => setIsMobileOpen(false)}
             />
             <motion.div
@@ -146,7 +146,7 @@ export function Header({
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              className="fixed top-0 right-0 bottom-0 w-full max-w-[min(320px,88vw)] bg-charcoal z-50 lg:hidden flex flex-col safe-bottom"
+              className="fixed top-0 right-0 bottom-0 w-full max-w-[min(320px,88vw)] bg-charcoal z-50 xl:hidden flex flex-col safe-bottom"
             >
               <div className="p-5 sm:p-6 border-b border-warm-beige/10 flex justify-between items-center gap-3">
                 <span className="text-champagne font-serif text-base sm:text-lg truncate">{hotelName}</span>

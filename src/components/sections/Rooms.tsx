@@ -64,12 +64,12 @@ export function RoomsSection({ rooms }: { rooms: Room[] }) {
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
                     {room.featured && (
-                      <span className="absolute top-4 left-4 bg-champagne text-charcoal text-[10px] tracking-widest uppercase px-3 py-1">
+                      <span className="absolute top-3 left-3 bg-champagne text-charcoal text-[10px] tracking-widest uppercase px-2.5 py-1 max-w-[calc(100%-1.5rem)] truncate">
                         Featured
                       </span>
                     )}
                     {room.availability === "limited" && (
-                      <span className="absolute top-4 right-4 bg-forest text-luxury-white text-[10px] tracking-widest uppercase px-3 py-1">
+                      <span className="absolute top-3 right-3 bg-forest text-luxury-white text-[10px] tracking-widest uppercase px-2.5 py-1">
                         Limited
                       </span>
                     )}
@@ -82,7 +82,7 @@ export function RoomsSection({ rooms }: { rooms: Room[] }) {
 
                   <div className="p-5 md:p-6 flex flex-col flex-1">
                     <span className="text-[10px] tracking-widest uppercase text-forest">{getCategoryLabel(room.category)}</span>
-                    <h3 className="text-xl font-serif text-charcoal mt-1 mb-3">{room.name}</h3>
+                    <h3 className="text-lg sm:text-xl font-serif text-charcoal mt-1 mb-3 break-words">{room.name}</h3>
 
                     <div className="flex flex-wrap gap-2 sm:gap-3 text-xs text-charcoal/55 mb-4">
                       <span className="flex items-center gap-1"><Users size={13} /> {room.capacity} Guests</span>

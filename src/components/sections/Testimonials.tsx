@@ -10,15 +10,15 @@ import type { Testimonial } from "@/types";
 function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
     <article className="bg-luxury-white shadow-luxury p-6 sm:p-8 md:p-10 relative h-full flex flex-col">
-      <Quote className="absolute top-4 right-4 sm:top-6 sm:right-6 text-champagne/15" size={48} />
+      <Quote className="absolute top-4 right-4 sm:top-6 sm:right-6 text-champagne/15 pointer-events-none" size={36} />
 
       <div className="flex items-center gap-4 mb-6">
         <div className="relative w-14 h-14 rounded-full overflow-hidden ring-2 ring-champagne/30">
           <SafeImage src={testimonial.guestPhoto} alt={testimonial.guestName} fill className="object-cover" sizes="56px" />
         </div>
         <div>
-          <h4 className="font-serif text-lg text-charcoal">{testimonial.guestName}</h4>
-          <p className="text-sm text-charcoal/55">{testimonial.city}, {testimonial.country}</p>
+          <h4 className="font-serif text-base sm:text-lg text-charcoal break-words">{testimonial.guestName}</h4>
+          <p className="text-sm text-charcoal/55 break-words">{testimonial.city}, {testimonial.country}</p>
         </div>
       </div>
 

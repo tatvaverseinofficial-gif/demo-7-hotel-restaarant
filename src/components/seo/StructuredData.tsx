@@ -10,8 +10,8 @@ export function generateHotelSchema(settings: WebsiteSettings) {
     address: {
       "@type": "PostalAddress",
       streetAddress: settings.address,
-      addressLocality: "Jaipur",
-      addressRegion: "Rajasthan",
+      addressLocality: "Mangalore",
+      addressRegion: "Karnataka",
       postalCode: "302001",
       addressCountry: "IN",
     },
@@ -45,8 +45,8 @@ export function generateRestaurantSchema(settings: WebsiteSettings) {
     address: {
       "@type": "PostalAddress",
       streetAddress: settings.address,
-      addressLocality: "Jaipur",
-      addressRegion: "Rajasthan",
+      addressLocality: "Mangalore",
+      addressRegion: "Karnataka",
       addressCountry: "IN",
     },
     telephone: settings.phone,
@@ -68,8 +68,8 @@ export function generateLocalBusinessSchema(settings: WebsiteSettings) {
     address: {
       "@type": "PostalAddress",
       streetAddress: settings.address,
-      addressLocality: "Jaipur",
-      addressRegion: "Rajasthan",
+      addressLocality: "Mangalore",
+      addressRegion: "Karnataka",
       addressCountry: "IN",
     },
     geo: {

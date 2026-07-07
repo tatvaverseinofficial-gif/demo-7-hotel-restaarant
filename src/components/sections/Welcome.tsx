@@ -59,14 +59,14 @@ export function WelcomeSection({ settings }: { settings: HomepageSettings }) {
                 </div>
               ))}
 
-              <div className="grid grid-cols-3 gap-3 sm:gap-4 pt-6 sm:pt-8 border-t border-warm-beige">
+              <div className="grid grid-cols-1 min-[400px]:grid-cols-3 gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-warm-beige">
                 {stats.map((stat, i) => (
                   <FadeIn key={stat.label} delay={0.2 + i * 0.1}>
-                    <div className="text-center">
+                    <div className="text-center px-2">
                       <span className="text-2xl sm:text-3xl md:text-4xl font-serif text-champagne block">
                         <AnimatedCounter end={stat.value} suffix={stat.suffix} />
                       </span>
-                      <p className="text-[10px] sm:text-xs md:text-sm text-charcoal/55 mt-1 tracking-wide leading-tight">{stat.label}</p>
+                      <p className="text-xs sm:text-sm text-charcoal/55 mt-1 tracking-wide leading-snug">{stat.label}</p>
                     </div>
                   </FadeIn>
                 ))}

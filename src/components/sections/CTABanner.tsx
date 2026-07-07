@@ -50,7 +50,9 @@ export function CTABanner({ phone }: { phone: string }) {
               href={`tel:${phone.replace(/\s/g, "")}`}
               className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 min-h-[48px] border border-champagne/50 text-champagne text-sm tracking-widest uppercase hover:bg-champagne/10 transition-colors w-full sm:w-auto touch-manipulation"
             >
-              <Phone size={18} /> {phone}
+              <Phone size={18} />
+              <span className="sm:hidden">Call Us</span>
+              <span className="hidden sm:inline break-all">{phone}</span>
             </a>
           </motion.div>
         </div>

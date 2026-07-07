@@ -18,11 +18,19 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
 
   body {
-    @apply bg-luxury-white text-charcoal antialiased overflow-x-hidden;
+    @apply bg-luxury-white text-charcoal antialiased overflow-x-hidden min-w-0;
     font-family: var(--font-sans);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  img,
+  video,
+  iframe {
+    max-width: 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -61,11 +69,15 @@
   }
 
   .section-padding {
-    @apply py-14 sm:py-20 md:py-28 lg:py-32;
+    @apply py-12 sm:py-20 md:py-28 lg:py-32;
   }
 
   .container-luxury {
-    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl w-full min-w-0;
+  }
+
+  .filter-scroll-outer {
+    @apply w-full min-w-0 -mx-4 px-4 sm:mx-0 sm:px-0;
   }
 
   /* Hide scrollbar for horizontal filter rows */
